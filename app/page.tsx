@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Zap, Palette, Shield } from "lucide-react"
 import Link from "next/link"
+import { LoginDialog } from "./_components/login-dialog"
 
 const techStack = [
   "Next.js v16", "React 19", "TypeScript", "Tailwind CSS v4",
@@ -46,11 +47,9 @@ export default function HomePage() {
               레이아웃, 다크모드, 폼 처리까지 이미 준비되어 있습니다.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Button asChild size="lg">
-                <Link href="/dashboard">대시보드 보기</Link>
-              </Button>
+              <LoginDialog />
               <Button asChild variant="outline" size="lg">
-                <Link href="/about">컴포넌트 예시</Link>
+                <Link href="/dashboard">대시보드 보기</Link>
               </Button>
             </div>
           </div>
